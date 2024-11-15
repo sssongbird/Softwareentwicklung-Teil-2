@@ -57,5 +57,9 @@ Beispiele geben, wann es in der Praxis angewendet wird.
 
    Observer:
    -> Grundlagen
+   - wenn ein Objekt seinen Zustand verändert, sollen die "Beobachter" benachrichtigt werden
+   - das kann man machen, indem sich die Beobachter beim Objekt "registrieren"
+   - per Pull holt der Beobachter sich die Information, sobald er eine Nachricht erhält, wenn sich der Zustand geändert hat
+   - per Push wird der veränderte Zustand direkt mitgesendet
 
 
