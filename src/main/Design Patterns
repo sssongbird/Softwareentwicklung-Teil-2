@@ -1,0 +1,40 @@
+Design Patterns
+
+### **Aufgabe: Einführung in die 5 meistgenutzten Design Patterns**
+
+**Ziel:**
+Du wirst fünf der meistgenutzten Design Patterns kennenlernen, implementieren und ihre Anwendungsfälle erklären. Die Aufgabe besteht darin, zu jedem Pattern ein
+kleines Programm oder eine Struktur in einer Programmiersprache deiner Wahl oder in Pseudo-Code zu schreiben. Du sollst außerdem jedes Pattern in eigenen Worten erklären und
+Beispiele geben, wann es in der Praxis angewendet wird.
+
+---
+
+### **Schritte der Aufgabe:**
+
+1. **Recherche und Verständnis der 5 häufigsten Design Patterns:**
+   - **Singleton:** Stellt sicher, dass eine Klasse nur eine Instanz hat und bietet einen globalen Zugriffspunkt.
+   - **Factory:** Stellt eine Methode bereit, um Objekte zu erstellen, ohne die genaue Klasse des Objekts anzugeben.
+   - **Observer:** Ermöglicht es, dass ein Objekt über Änderungen in einem anderen Objekt benachrichtigt wird.
+   - **Strategy:** Ermöglicht es, ein Verhalten zur Laufzeit auszuwählen, indem verschiedene Algorithmen als separate Klassen implementiert werden.
+   - **Decorator:** Fügt einer Klasse dynamisch zusätzliche Funktionalitäten hinzu, ohne die Klasse selbst zu ändern.
+
+
+
+
+2. **Implementiere jedes Pattern in Pseudo-Code oder in einer Programmiersprache deiner Wahl.**
+
+3. **Erklärung und Anwendungsfall:**
+   - Füge zu jeder Implementierung eine kurze Erklärung hinzu, wie das Pattern funktioniert und in welchen Szenarien es am besten angewendet wird.
+
+4. **Zusammenfassung:**
+   - Beschreibe zum Schluss, welches Pattern für dich am sinnvollsten und einfachsten zu verstehen war und warum. Erläutere außerdem, ob du in deinen bisherigen Programmierprojekten schon ein solches Pattern genutzt hast oder in Zukunft anwenden würdest.
+
+   Grundlagen Singleton:
+   - aus einer Klasse werden Objekte erzeugt
+   - das Singleton-Pattern sorgt dafür, dass nur ein Objekt der Klasse entsteht
+   - führt zu einer global verfügbaren Klasse
+
+   Schritt 0: Klasse erstellen
+   Schritt 1: Der Konstruktor wird als privat deklariert (-> so kann nicht mehr von außerhalb auf die Klasse zugegriffen werden)
+   Schritt 2: Es wird ein privates und statisches Objekt der Klasse erzeugt (-> keine anderen Klassen haben Zugriff auf dieses Objekt)
+   Schritt 3: über die statische Methode wird der Zugriff auf das einzige Objekt gewährleistet
