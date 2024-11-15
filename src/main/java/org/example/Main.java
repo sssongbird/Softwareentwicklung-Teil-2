@@ -1,11 +1,13 @@
 package org.example;
+import Tiere.*;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
 public class Main {
     public static void main(String[] args) {
         Zentralbank zentralbank = Zentralbank.getInstance();
         System.out.println("Der aktuelle Leitzins liegt bei: " + zentralbank.getLeitzins() + " Prozent");
+
+        Tier clownfisch = TierFabrik.erstelleTier("Clownfisch");
+        clownfisch.vorstellung();
     }
 }

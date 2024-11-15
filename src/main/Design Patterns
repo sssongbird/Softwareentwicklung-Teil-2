@@ -15,11 +15,9 @@ Beispiele geben, wann es in der Praxis angewendet wird.
    - **Singleton:** Stellt sicher, dass eine Klasse nur eine Instanz hat und bietet einen globalen Zugriffspunkt.
    - **Factory:** Stellt eine Methode bereit, um Objekte zu erstellen, ohne die genaue Klasse des Objekts anzugeben.
    - **Observer:** Ermöglicht es, dass ein Objekt über Änderungen in einem anderen Objekt benachrichtigt wird.
-   - **Strategy:** Ermöglicht es, ein Verhalten zur Laufzeit auszuwählen, indem verschiedene Algorithmen als separate Klassen implementiert werden.
+   - **Strategy:** Ermöglicht es, ein Verhalten zur Laufzeit auszuwählen, indem verschiedene Algorithmen als separate
+   Klassen implementiert werden.
    - **Decorator:** Fügt einer Klasse dynamisch zusätzliche Funktionalitäten hinzu, ohne die Klasse selbst zu ändern.
-
-
-
 
 2. **Implementiere jedes Pattern in Pseudo-Code oder in einer Programmiersprache deiner Wahl.**
 
@@ -31,12 +29,33 @@ Beispiele geben, wann es in der Praxis angewendet wird.
    Erläutere außerdem, ob du in deinen bisherigen Programmierprojekten schon ein solches Pattern genutzt hast oder in
    Zukunft anwenden würdest.
 
-   Grundlagen Singleton:
+   Singleton:
+   -> Grundlagen
    - aus einer Klasse werden Objekte erzeugt
    - das Singleton-Pattern sorgt dafür, dass nur ein Objekt der Klasse entsteht
    - führt zu einer global verfügbaren Klasse
 
-   Schritt 0: Klasse erstellen
-   Schritt 1: Der Konstruktor wird als privat deklariert (-> so kann nicht mehr von außerhalb auf die Klasse zugegriffen werden)
-   Schritt 2: Es wird ein privates und statisches Objekt der Klasse erzeugt (-> keine anderen Klassen haben Zugriff auf dieses Objekt)
-   Schritt 3: über die statische Methode wird der Zugriff auf das einzige Objekt gewährleistet
+   -> Anwendung
+   - wenn man einwas wichtiges abfragen möchte (Leitzins)
+   - bei Logging, um die Datenkonsistenz zu gewährleisten
+   - für Datenbanken, um Ressourcen zu sparen und Verbindungsmanagement zu vereinfachen
+
+   Factory:
+   -> Grundlagen
+   - es dient dazu, dass Objekte an einer zentralen Stelle durch den Aufruf einer Methode erzeugt werden können
+   - die Daten werden gekapselt
+   - die Implementierung kann jederzeit geändert werden ohne das andere Klassen beeinträchtigt werden
+   - Übersichtlichkeit wird erhöht da eine Schnittstelle und nicht die ganze Implementierung zur Verfügung gestellt wird
+   - wie das Objekt erstellt wird bleibt zentral an einer Stelle
+
+   -> Anwendung
+   - Netzwerkprotokolle
+   - Parser
+   - Spieleentwicklung
+   - Datenbankverbindungen
+   - GUI
+
+   Observer:
+   -> Grundlagen
+
+
