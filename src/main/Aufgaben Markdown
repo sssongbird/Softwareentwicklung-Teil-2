@@ -1,0 +1,425 @@
+### **1. Sinnvolle Namensgebung**
+**Code:**
+```java
+public class C {
+    public void m(int x, int y) {
+        int z = x + y;
+        System.out.println(z);
+    }
+}
+```
+**Aufgabe:** Benenne die Klasse, Methode und Variablen so um, dass die Funktion des Codes klar wird.
+
+public class SinnvolleNamensgebung {
+    public void addition(int summand1, int summand2) {
+        int summe = summand1 + summand2;
+        System.out.println(summe);
+    }
+}
+
+---
+
+### **2. Einrückung und Formatierung**
+**Code:**
+```java
+public class Formatter {public void format(){System.out.println("Hello");System.out.println("World");}}
+```
+**Aufgabe:** Formatiere den Code mit einheitlichen Einrückungen und Zeilenumbrüchen.
+
+public class Formatter {
+    public void format(){
+        System.out.println("Hello");
+        System.out.println("World");
+        }
+}
+
+---
+
+### **3. Verwendung von Konstanten statt Magic Numbers**
+**Code:**
+```java
+public class Circle {
+    public double calculateArea(double radius) {
+        return 3.14159 * radius * radius;
+    }
+}
+```
+**Aufgabe:** Ersetze die Zahl 3.14159 durch eine benannte Konstante.
+
+public class Circle {
+    public double calculateArea(double radius) {
+        double pi = 3.14159;
+        return  pi * radius * radius;
+    }
+}
+
+---
+
+### **4. Methodenkürze durch Zerlegen**
+**Code:**
+```java
+public class Order {
+    public void processOrder() {
+        System.out.println("Processing order");
+        // Check stock
+        if (getStock() > 10) {
+            System.out.println("Stock sufficient");
+        }
+        // Calculate price
+        double total = getStock() * getPrice();
+        System.out.println("Total: " + total);
+    }
+}
+```
+**Aufgabe:** Zerlege die Methode `processOrder` in mehrere kürzere Methoden.
+
+public class Order {
+    public void processOrder() {
+        System.out.println("Processing order");
+        // Check stock
+        if (getStock() > 10) {
+            System.out.println("Stock sufficient");
+        }
+    }
+    public void calculateOrder() {
+        // Calculate price
+        double total = getStock() * getPrice();
+        System.out.println("Total: " + total);
+    }
+}
+
+---
+
+### **5. Inkonsistente Namenskonventionen**
+**Code:**
+```java
+public class user_data {
+    public void get_data() {
+        int UserID = 123;
+        System.out.println(UserID);
+    }
+}
+```
+**Aufgabe:** Bringe die Klassennamen und Methoden auf eine einheitliche Konvention.
+
+public class UserData {
+    public void GetData() {
+        int userID = 123;
+        System.out.println(userID);
+    }
+}
+
+---
+
+### **6. Kommentare zur Dokumentation**
+**Code:**
+```java
+public class Calculator {               //erstellt die Klasse Calculator
+    public int add(int a, int b) {      //erstellt die Methode add mit den Parametern int a und int b
+        return a + b;                   //gibt die Summe aus beiden Paramtern zurück
+    }
+}
+```
+**Aufgabe:** Füge kurze Kommentare hinzu, die erklären, was die Methode tut.
+
+---
+
+### **7. Verständliche Bedingungslogik**
+**Code:**
+```java
+public class Discount {
+    public void applyDiscount(double price) {
+        if (price > 100) {
+            System.out.println("Discount applied");
+        }
+    }
+}
+```
+**Aufgabe:** Ersetze die Bedingung durch eine Methode wie `isEligibleForDiscount` für bessere Lesbarkeit.
+
+public class Discount {
+    public void isEligibleForDiscount(double
+    public void applyDiscount(double price) {
+        if (isEligibleForDiscount == true) {
+            System.out.println("Discount applied");
+        }
+    }
+}
+
+---
+
+### **8. Korrekte Verwendung von Access Modifiers**
+**Code:**
+```java
+public class Employee {
+    String name;
+    double salary;
+}
+```
+**Aufgabe:** Setze geeignete Zugriffsmodifikatoren (`private`, `public`).
+
+public class Employee {
+    public String name;
+    private double salary;
+}
+
+---
+
+### **9. Sinnvolle Default-Werte**
+**Code:**
+```java
+public class Account {
+    public double balance;
+}
+```
+**Aufgabe:** Setze einen Default-Wert für das `balance`-Attribut, um Nullwerte zu vermeiden.
+
+public class Account {
+    public double balance = 20,5;
+}
+
+---
+
+### **10. Konsistenz bei Kommentaren**
+**Code:**
+```java
+public class Car {
+    // This method starts the car
+    public void ignite() {
+        System.out.println("Car started");
+    }
+}
+```
+**Aufgabe:** Bringe die Kommentierung in Einklang mit anderen Methoden.
+
+public class Car {                          //Initiation Car class
+    public void ignite() {                  //Initiation method ignite
+        System.out.println("Car started");  //prints the result
+    }
+}
+
+---
+
+### **11. Vermeidung von `else` durch frühzeitige Rückgabe**
+**Code:**
+```java
+public class Validator {
+    public boolean isValid(int number) {
+        if (number > 0) {
+            return true;
+        }
+        return false;
+
+    }
+}
+```
+**Aufgabe:** Entferne das `else` durch eine direkte Rückgabe.
+
+public class Validator {
+    public boolean isValid(int number) {
+        if (number > 0) {
+            return number;
+        }
+    }
+}
+
+---
+
+### **12. Sinnvolle Aufteilung von Logik in Helper-Methoden**
+**Code:**
+```java
+public class ReportGenerator {
+    public void generateReport(String data) {
+        System.out.println("Validating data");
+        System.out.println("Formatting report");
+        System.out.println("Saving report");
+    }
+}
+```
+**Aufgabe:** Teile die einzelnen Schritte in separate Methoden auf.
+
+public class ReportGenerator {
+    public void generateReport(String data) {
+        public void validateData(String data) {
+            System.out.println("Validating data");
+        }
+        public void formatReport(String data) {
+            System.out.println("Formatting report");
+        }
+        public void saveReport(String data) {
+            System.out.println("Saving report");
+        }
+    }
+}
+
+---
+
+### **13. Verwendung von Enumerations statt Magic Strings**
+**Code:**
+```java
+public class Payment {
+    public void process(String type) {
+        if (type.equals("credit")) {
+            System.out.println("Processing credit payment");
+        }
+    }
+}
+```
+**Aufgabe:** Ersetze den String `type` durch ein Enum.
+
+public class Payment {
+    enum Type {
+        cash,
+        credit
+    }
+
+    public void process(Type) {
+        Type paymentType = Type.credit;
+        if (paymentType.equals("credit")) {
+            System.out.println("Processing credit payment");
+        }
+    }
+}
+
+---
+
+### **14. Einheitliche Großschreibung bei Konstanten**
+**Code:**
+```java
+public class Constants {
+    public static final int Max_Value = 100;
+}
+```
+**Aufgabe:** Setze die Konstante auf eine einheitliche Großschreibung (`MAX_VALUE`).
+
+public class Constants {
+    public static final int MAX_VALUE = 100;
+}
+
+---
+
+### **15. Vermeidung von Redundanz**
+**Code:**
+```java
+public class SquareCalculator {
+    public int calculateSquare(int number) {
+        return number * number;
+    }
+}
+```
+**Aufgabe:** Fasse den Code so zusammen, dass Redundanz vermieden wird.
+
+public class SquareCalculator {
+    public int calculateSquare(int number) {
+        return (int) Math.pow(number, 2);
+    }
+}
+
+---
+
+### **16. Vereinheitlichung von Kontrollstrukturen**
+**Code:**
+```java
+public class Checker {
+    public boolean isPositive(int number) {
+        if (number > 0) return true; else return false;
+    }
+}
+```
+**Aufgabe:** Gestalte die `if`-Anweisung übersichtlicher.
+
+public class Checker {
+    public boolean isPositive(int number) {
+        if (number > 0) {
+            return true;
+        }
+        return false;
+    }
+}
+
+---
+
+### **17. Ersetzung von null-Prüfungen durch Optional**
+**Code:**
+```java
+public class UserFinder {
+    public User findUser(String name) {
+        return null;
+    }
+}
+```
+**Aufgabe:** Verwende `Optional` anstelle von `null`.
+
+public class UserFinder {
+    public User findUser(String name) {
+        Optional<String> onb = Optional.ofNullable(null);
+        return onb;
+    }
+}
+
+---
+
+### **18. Sinnvolle Nutzung von Interfaces**
+**Code:**
+```java
+public class PDFReport {
+    public void generatePDF() {
+        System.out.println("Generating PDF report");
+    }
+}
+```
+**Aufgabe:** Extrahiere ein Interface für `generatePDF`.
+
+interface Pdf {
+    public void generatePDF();  //interface method (does not have a body)
+}
+
+public class PDFReport implements Pdf {
+    public void generatePDF() {
+        System.out.println("Generating PDF report");
+    }
+}
+
+---
+
+### **19. Entfernen ungenutzter Variablen**
+**Code:**
+```java
+public class Calculator {
+    public int add(int a, int b) {
+        int temp = 0;
+        return a + b;
+    }
+}
+```
+**Aufgabe:** Entferne die ungenutzte Variable `temp`.
+
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+
+---
+
+### **20. Verwenden von Parametern statt Global Variablen**
+**Code:**
+```java
+public class Printer {
+    public String message = "Hello";
+
+    public void print() {
+        System.out.println(message);
+    }
+}
+```
+**Aufgabe:** Verwende eine Methode, die `message` als Parameter übernimmt, anstatt als globale Variable.
+
+public class Printer {
+    String message = "Hello";
+
+    public void print(String message) {
+        System.out.println(message);
+    }
+}
+
