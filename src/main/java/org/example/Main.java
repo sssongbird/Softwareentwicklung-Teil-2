@@ -15,8 +15,8 @@ public class Main {
 
         BlackHole blackHole = new BlackHole();
 
-        Researcher Ricardo = new Researcher(blackHole, " Justin ");
-        Researcher Yaplias = new Researcher(blackHole, " Robert ");
+        Researcher Ricardo = new Researcher(blackHole, "Ricardo");
+        Researcher Yaplias = new Researcher(blackHole, "Yaplias");
 
         blackHole.setAction("swimming");
         System.out.println();

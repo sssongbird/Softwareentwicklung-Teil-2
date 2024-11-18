@@ -1,0 +1,13 @@
+Kopplung:
+Definition: Kopplung beschreibt das Maß der Abhängigkeit zwischen Modulen oder Klassen in einem System.
+Ziel: Niedrige Kopplung ist wünschenswert, da sie die Module unabhängiger und leichter wartbar macht.
+Beispiel: Wenn eine Klasse stark von den Details einer anderen Klasse abhängt, ist die Kopplung hoch.
+
+-> wenn z.B. eine Klasse komplett an eine andere Klasse verkoppelt ist (also alle Methoden sich auf eine andere Klasse beziehen)
+   , dann sollte der Code in die Klasse übernommen werden auf die sich bezogen wird
+
+Kohäsion:
+Definition: Kohäsion beschreibt, wie stark die Elemente innerhalb eines Moduls oder einer Klasse zusammengehören.
+Ziel: Hohe Kohäsion ist wünschenswert, da sie bedeutet, dass die Elemente eines Moduls eng miteinander verbunden
+und auf eine einzige Aufgabe fokussiert sind.
+Beispiel: Eine Klasse, die nur für die Verwaltung von Kundendaten zuständig ist, hat eine hohe Kohäsion.

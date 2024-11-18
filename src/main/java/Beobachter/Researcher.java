@@ -15,7 +15,7 @@ public class Researcher implements Observer{
 
     @Override
     public void update() {
-        System.out.println("The researcher " + name + " sees that the Black Hole " + name + "is doing" + blackHole.getAction());
+        System.out.println("The researcher " + name + " sees that the Black Hole " + name + " is " + blackHole.getAction());
     }
 
 }
