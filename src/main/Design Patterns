@@ -62,4 +62,10 @@ Beispiele geben, wann es in der Praxis angewendet wird.
    - per Pull holt der Beobachter sich die Information, sobald er eine Nachricht erhält, wenn sich der Zustand geändert hat
    - per Push wird der veränderte Zustand direkt mitgesendet
 
+   -> Anwendungen
+   - Benachrichtigungssysteme
+   - GUI-Frameworks (bei Änderung in der Benutzeroberfläche, werden alle relevanten Komponenten aktualisiert)
+   - Datenbank-Trigger (Trigger können als Beobachter fungieren, die auf bestimmte Änderungen in der Datenbank reagieren)
+   - Social Media Feeds (wenn ein Benutzer einen neuen Beitrag erstellt, werden alle Follower benachrichtigt)
+
 
