@@ -1,13 +1,35 @@
 Kopplung:
-Definition: Kopplung beschreibt das Maß der Abhängigkeit zwischen Modulen oder Klassen in einem System.
-Ziel: Niedrige Kopplung ist wünschenswert, da sie die Module unabhängiger und leichter wartbar macht.
-Beispiel: Wenn eine Klasse stark von den Details einer anderen Klasse abhängt, ist die Kopplung hoch.
+Definition:     Kopplung beschreibt das Maß der Abhängigkeit zwischen Modulen oder Klassen in einem System.
+Ziel:           Niedrige Kopplung ist wünschenswert, da sie die Module unabhängiger und leichter wartbar macht.
+Beispiel:       Wenn eine Klasse stark von den Details einer anderen Klasse abhängt, ist die Kopplung hoch.
 
--> wenn z.B. eine Klasse komplett an eine andere Klasse verkoppelt ist (also alle Methoden sich auf eine andere Klasse beziehen)
-   , dann sollte der Code in die Klasse übernommen werden auf die sich bezogen wird
+                -> wenn z.B. eine Klasse komplett an eine andere Klasse verkoppelt ist (also alle Methoden sich auf eine andere Klasse beziehen)
+                   , dann sollte der Code in die Klasse übernommen werden auf die sich bezogen wird
 
 Kohäsion:
-Definition: Kohäsion beschreibt, wie stark die Elemente innerhalb eines Moduls oder einer Klasse zusammengehören.
-Ziel: Hohe Kohäsion ist wünschenswert, da sie bedeutet, dass die Elemente eines Moduls eng miteinander verbunden
-und auf eine einzige Aufgabe fokussiert sind.
-Beispiel: Eine Klasse, die nur für die Verwaltung von Kundendaten zuständig ist, hat eine hohe Kohäsion.
+Definition:     Kohäsion beschreibt, wie stark die Elemente (z.B. Attribute und Methoden) innerhalb eines Moduls oder einer Klasse zusammengehören.
+Ziel:           Hohe Kohäsion ist wünschenswert, da sie bedeutet, dass die Elemente eines Moduls eng miteinander verbunden
+                und auf eine einzige Aufgabe fokussiert sind.
+Beispiel:       Eine Klasse, die nur für die Verwaltung von Kundendaten zuständig ist, hat eine hohe Kohäsion.
+                -> niedrige Kohäsion, wenn Attribute in der Klasse nicht von den Methoden in derselben Klasse genutzt werden
+
+Vererbung:
+Definition:     Vererbung ist ein Prinzip der objektorientierten Programmierung, bei dem eine Klasse (Unterklasse) die Eigenschaften
+                und Methoden einer anderen Klasse (Oberklasse) erbt.
+Ziel:           Wiederverwendung von Code und Erstellung einer Hierarchie von Klassen, die gemeinsame Merkmale teilen.
+Beispiel:       Eine Klasse Fahrzeug hat allgemeine Eigenschaften wie Geschwindigkeit und Farbe. Eine Unterklasse Auto erbt diese
+                Eigenschaften und kann zusätzliche spezifische Eigenschaften wie Anzahl der Türen hinzufügen.
+
+                -> es wird nach unten weitervererbt und von unten nach oben aufgerufen
+                -> Vorteile der Verwendung eines Interfaces:
+                   Flexibilität:    Ein Interface wie IMensch definiert eine Reihe von Methoden, die jede Klasse, die das Interface implementiert,
+                                    bereitstellen muss. Das bedeutet, dass du verschiedene Implementierungen haben kannst, die alle das gleiche Interface verwenden.
+                   Entkopplung      Durch die Verwendung von Interfaces kannst du den Code entkoppeln. Das bedeutet, dass Änderungen an der Implementierung der
+                                    Klasse Mensch nicht den Rest des Codes beeinflussen, solange das Interface gleich bleibt.
+                   Polymorphismus:  Du kannst Objekte der Klasse Mensch über das Interface IMensch ansprechen, was den Code flexibler und erweiterbarer macht.
+ Polymorphie:   ist die Umkehrung von Abhängigkeiten   (wichtig)
+                -> Interfaces -> Plug-in
+
+Unterschiede prozed. Entwicklung vs OOP: prozed.: simpel, Code ist in Unterprogramme organisiert, kreuzorganisiert zwischen Funktionen, später dann in sequenzielle Entwicklung weiterentwickelt: Einschränkungen/Prinzipien/Regeln: Schleifen wie zB while, for und Sachen wie zB: if, else
+                                         oop.: Programm wird in Klassen, Objekte, Methoden aufgeteilt und strukturiert und bietet mehr Erweiterbarkeit/Wartbarkeit
+
