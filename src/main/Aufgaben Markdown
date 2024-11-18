@@ -10,7 +10,7 @@ public class C {
 ```
 **Aufgabe:** Benenne die Klasse, Methode und Variablen so um, dass die Funktion des Codes klar wird.
 
-public class SinnvolleNamensgebung {
+public class ArithmeticOperations {
     public void addition(int summand1, int summand2) {
         int summe = summand1 + summand2;
         System.out.println(summe);
@@ -30,7 +30,7 @@ public class Formatter {
     public void format(){
         System.out.println("Hello");
         System.out.println("World");
-        }
+    }
 }
 
 ---
@@ -47,9 +47,9 @@ public class Circle {
 **Aufgabe:** Ersetze die Zahl 3.14159 durch eine benannte Konstante.
 
 public class Circle {
+    private static final double PI = 3.141;
     public double calculateArea(double radius) {
-        double pi = 3.14159;
-        return  pi * radius * radius;
+        return  this.PI * radius * radius;
     }
 }
 
@@ -87,6 +87,7 @@ public class Order {
         System.out.println("Total: " + total);
     }
 }
+*****
 
 ---
 
@@ -103,7 +104,7 @@ public class user_data {
 **Aufgabe:** Bringe die Klassennamen und Methoden auf eine einheitliche Konvention.
 
 public class UserData {
-    public void GetData() {
+    public void getData() {
         int userID = 123;
         System.out.println(userID);
     }
@@ -116,7 +117,7 @@ public class UserData {
 ```java
 public class Calculator {               //erstellt die Klasse Calculator
     public int add(int a, int b) {      //erstellt die Methode add mit den Parametern int a und int b
-        return a + b;                   //gibt die Summe aus beiden Paramtern zurück
+        return a + b;                   //gibt die Summe aus beiden Parametern zurück
     }
 }
 ```
@@ -145,7 +146,7 @@ public class Discount {
         }
     }
 }
-
+*****
 ---
 
 ### **8. Korrekte Verwendung von Access Modifiers**
@@ -192,9 +193,12 @@ public class Car {
 ```
 **Aufgabe:** Bringe die Kommentierung in Einklang mit anderen Methoden.
 
-public class Car {                          //Initiation Car class
-    public void ignite() {                  //Initiation method ignite
-        System.out.println("Car started");  //prints the result
+/**
+  * Starts the car
+  */
+public class Car {
+    public void ignite() {
+        System.out.println("Car started");
     }
 }
 
@@ -207,9 +211,9 @@ public class Validator {
     public boolean isValid(int number) {
         if (number > 0) {
             return true;
-        }
+        } else {
         return false;
-
+        }
     }
 }
 ```
@@ -217,9 +221,7 @@ public class Validator {
 
 public class Validator {
     public boolean isValid(int number) {
-        if (number > 0) {
-            return number;
-        }
+        return number > 0;
     }
 }
 
@@ -240,15 +242,19 @@ public class ReportGenerator {
 
 public class ReportGenerator {
     public void generateReport(String data) {
-        public void validateData(String data) {
-            System.out.println("Validating data");
-        }
-        public void formatReport(String data) {
-            System.out.println("Formatting report");
-        }
-        public void saveReport(String data) {
-            System.out.println("Saving report");
-        }
+        validateData(data);
+        formatReport(data);
+        saveReport(data);
+    }
+
+    public void validateData(String data) {
+        System.out.println("Validating data");
+    }
+    public void formatReport(String data) {
+        System.out.println("Formatting report");
+    }
+    public void saveReport(String data) {
+        System.out.println("Saving report");
     }
 }
 
@@ -267,14 +273,14 @@ public class Payment {
 ```
 **Aufgabe:** Ersetze den String `type` durch ein Enum.
 
-public class Payment {
-    enum Type {
-        cash,
-        credit
+enum Type {
+        CASH,
+        CREDIT
     }
 
+public class Payment {
     public void process(Type) {
-        Type paymentType = Type.credit;
+        Type paymentType = Type.CREDIT;
         if (paymentType.equals("credit")) {
             System.out.println("Processing credit payment");
         }
