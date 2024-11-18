@@ -15,12 +15,12 @@ public class Main {
 
         BlackHole blackHole = new BlackHole();
 
-        Researcher Justin = new Researcher(blackHole, "Justin");
-        Researcher Robert = new Researcher(blackHole, "Robert");
+        Researcher Ricardo = new Researcher(blackHole, " Justin ");
+        Researcher Yaplias = new Researcher(blackHole, " Robert ");
 
         blackHole.setAction("swimming");
         System.out.println();
-        blackHole.setAction("backflip");
+        blackHole.setAction("doing backflips");
         System.out.println();
 
     }
