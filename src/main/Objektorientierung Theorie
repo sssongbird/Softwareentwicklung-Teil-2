@@ -30,6 +30,7 @@ Beispiel:       Eine Klasse Fahrzeug hat allgemeine Eigenschaften wie Geschwindi
  Polymorphie:   ist die Umkehrung von Abhängigkeiten   (wichtig)
                 -> Interfaces -> Plug-in
 
-Unterschiede prozed. Entwicklung vs OOP: prozed.: simpel, Code ist in Unterprogramme organisiert, kreuzorganisiert zwischen Funktionen, später dann in sequenzielle Entwicklung weiterentwickelt: Einschränkungen/Prinzipien/Regeln: Schleifen wie zB while, for und Sachen wie zB: if, else
-                                         oop.: Programm wird in Klassen, Objekte, Methoden aufgeteilt und strukturiert und bietet mehr Erweiterbarkeit/Wartbarkeit
+Unterschiede prozed. Entwicklung vs OOP: prozed.: simpel, Code ist in Unterprogramme organisiert, kreuzorganisiert zwischen Funktionen
+                                                  -> später dann in sequenzielle Entwicklung weiterentwickelt: Einschränkungen/Prinzipien/Regeln: Schleifen wie zB while, for und Sachen wie zB: if, else
+                                         OOP:     Programm wird in Klassen, Objekte, Methoden aufgeteilt und strukturiert und bietet mehr Erweiterbarkeit/Wartbarkeit
 
