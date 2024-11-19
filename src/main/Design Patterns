@@ -68,4 +68,30 @@ Beispiele geben, wann es in der Praxis angewendet wird.
    - Datenbank-Trigger (Trigger können als Beobachter fungieren, die auf bestimmte Änderungen in der Datenbank reagieren)
    - Social Media Feeds (wenn ein Benutzer einen neuen Beitrag erstellt, werden alle Follower benachrichtigt)
 
+   Strategy Pattern:
+   -> Grundlagen
+   - wenn man eine Klasse definieren will, die ein Verhalten hat, das anderen Verhaltensweisen in einer Liste ähnlich ist
+   - das Klassenobjekt kann dann zB von den Verhaltensweisen "kann fliegen", "kann nicht fliegen", "kann schnell fliegen"
+   - wenn man die Verhaltensweisen dynamisch nutzen will
+   -> reduziert lange conditional Listen
+   -> vermeiden von redundanten Code
+   -> verhindern, dass Klassenänderungen andere Klassenänderungen erzwingen
 
+   -> Anwendungen
+   - Zahlungsmethoden
+   - Rabatte
+   - Turn-based Games
+
+   Decorator
+   -> Grundlagen
+   - ermöglicht es einem Objekt dynamisch zusätzliche Verantwortlichkeiten hinzuzufügen, ohne seine Struktur zu ändern
+
+   - Komponenten-Schnittstelle: Definiert die Schnittstelle, die sowohl von den konkreten Komponenten als auch von den Dekoratoren implementiert wird.
+   - Konkrete Komponente:       Die Basisklasse, deren Funktionalität erweitert werden soll.
+   - Dekorator-Klasse:          Eine abstrakte Klasse, die die Komponenten-Schnittstelle implementiert und eine Referenz auf ein Komponenten-Objekt hält. Sie delegiert die Operationen an das Komponenten-Objekt.
+   - Konkrete Dekoratoren:      Klassen, die von der Dekorator-Klasse erben und zusätzliche Funktionalitäten hinzufügen.
+
+   -> Anwendungen
+   - Kaffeemaschine
+   - Lieferando (es wird ein vorgefertigter Burger bestellt und dann gibt es die Möglichkeit Extras dazuzubestellen welche dann durch einen
+     Decorator hinzugefügt werden können wenn dafür dann die Klassen erstellt werden. So muss der Burger an sich nicht jedes mal abgeändert werden, sondern die Extras werden einfach nur hinzugefügt)
