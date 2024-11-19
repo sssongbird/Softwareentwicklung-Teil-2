@@ -1,0 +1,87 @@
+Theorie Java Build Tools:
+Was sind Build Tools?
+- Build Tools automatisieren die Erstellung von ausführbaren Anwendungen vom source Code (z.B. .apk für eine Android App)
+- Der Build Prozess beinhaltet kompilieren, linking und packaging des Codes in ein nutzbares und ausführbares Format
+-> kurz: ist die Automatisierung von täglichen Aufgaben eines Entwicklers
+
+Grobe Reihenfolge:
+1. Downloading dependencies.
+2. Compiling source code into binary code.
+3. Packaging that binary code.
+4. Running tests.
+5. Deployment to production systems.
+
+Wofür benutzt man Build Tools?
+- in kleinen Projekten rufen Entwickler meist selbst den Build Process auf
+- in großen Projekten ist es meist schwerer die Übersicht darüber zu behalten, was gebuilded werden muss und in welcher Reihenfolge und welche dependencies in dem Build Process benötigt werden.
+  Deswegen nutzt man in großen Projekten dieses Automatisierungs Tool (Build Tool), um den Prozess konsistent zu halten
+
+Source: https://stackoverflow.com/questions/7249871/what-is-a-build-tool
+
+Maven
+- verwaltet den Build Prozess, einschließlich Quellcodekompilierung, Testen, Verpacken und mehr
+- Maven verwendet das Project Object Model (POM)
+
+Kernfunktionalitäten:
+
+
+Abhängigkeitsverwaltung:            Maven vereinfacht die Einbindung dritter externer Bibliotheken in unser Projekt und
+                                    kann erforderliche Bibliotheken automatisch herunterladen.
+Standardisierte Projektstruktur:    Es bietet eine standardmäßige Projektordnerstruktur, wie z. B. Quellcode in einem Paket, Testcode
+                                    in einem Paket und andere.
+Build-Lebenszyklus:                 Die verschiedenen Build-Phasen von Maven zum Erstellen des Projekts.
+Plugins:                            Es werden verschiedene Plugins unterstützt, die Kompilierung, Tests, Verpackung, Bereitstellung,
+                                    Dokumentationserstellung und mehr durchführen.
+Projektobjektmodell:                Jedes Maven-Projekt hat eine übergeordnete pom.xml-Datei, die die Konfiguration und das
+                                    Abhängigkeitsmanagement des Maven-Projekts bestimmen kann.
+Zentrales Repository:               Maven verwendet ein zentrales Repository zum Herunterladen von Projektabhängigkeiten, was die
+                                    Abhängigkeitsverwaltung vereinfacht.
+Build-Profile:                      Der Maven-Build-Zyklus verarbeitet verschiedene Profile wie Entwicklung, Qualitätssicherung,
+                                    Produktion und andere
+Berichte und Dokumentation:         Maven kann mithilfe von Plugins verschiedene Arten von Projektberichten und Dokumentationen generieren.
+                                    Dazu gehören Javadoc , Code Coverage-Berichte und Site-Generierung.
+IDE-Integration:                    Es unterstützt verschiedene IDEs wie STS, Eclipse, IntelliJ IDEA und NetBeans.
+
+
+Projektstruktur v. Maven
+
+src/main/java:          Es enthält den Hauptquellcode von Java.
+src/main/resources:     Enthält von der Anwendung verwendete Nicht-Java-Ressourcen.
+src/main/webapp:        Enthält Ressourcen für Webanwendungen.
+src/test/java:          Enthält den Testquellcode.
+src/test/resources:     Enthält Ressourcen, die zum Testen verwendet werden.
+Ziel:                   Es enthält kompilierte Klassen, gepackte JARs/WARs und andere erstellte Artefakte.
+pom.xml:                Die Projektobjektmodelldatei, die die Projektkonfiguration, Abhängigkeiten und Build-Einstellungen definiert.
+
+Was ist die pom.xml datei? Wofür ist sie da? Was kann ich damit machen?
+- die pom Datei ist eine Konfigurationsdatei für das Maven Projekt
+- beschreibt die Konfiguration und das Ahängigkeitsmanagement des Projektes
+
+
+Wie ist der Lebenszyklus v. Maven?
+
+Validieren:         In dieser Phase wird überprüft, ob die Projektstruktur korrekt ist oder nicht.
+Kompilieren:        Es kompiliert den Quellcode, konvertiert die .java-Dateien in .class-Dateien und speichert diese Klassen
+                    im Ordner target/classes.
+Test:               Es führt Unit-Tests für das Maven-Projekt aus
+Paket:              Diese Phase ist für die Verteilung des kompilierten Codes im WAR-, JAR- und anderen Formaten verantwortlich.
+Integrationstest:   Integrationstests für das Maven-Projekt werden ausgeführt
+Überprüfen:         Überprüft, ob das Projekt gültig ist und die Qualitätsstandards erfüllt.
+Installieren:       Diese Phase ist für die Installation des gepackten Codes auf dem System verantwortlich.
+Bereitstellen:      Kopiert den gepackten Code zur Bereitstellung in das Remote-Repository, sodass andere
+                    Entwickler problemlos darauf zugreifen können.
+
+Source: https://www.geeksforgeeks.org/what-is-maven/
+
+
+Anlegen leeres Maven Projekt
+auf ein seperates GitHUB Repo hochladen
+
+
+Gradle
+
+Ant
+
+IntelliJ Embedded Java Builder
+
+

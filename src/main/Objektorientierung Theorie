@@ -34,3 +34,5 @@ Unterschiede prozed. Entwicklung vs OOP: prozed.: simpel, Code ist in Unterprogr
                                                   -> später dann in sequenzielle Entwicklung weiterentwickelt: Einschränkungen/Prinzipien/Regeln: Schleifen wie zB while, for und Sachen wie zB: if, else
                                          OOP:     Programm wird in Klassen, Objekte, Methoden aufgeteilt und strukturiert und bietet mehr Erweiterbarkeit/Wartbarkeit
 
+Konstruktor: initialisiert eine Klasse und gibt die Instanz dieser Klasse aus
+
