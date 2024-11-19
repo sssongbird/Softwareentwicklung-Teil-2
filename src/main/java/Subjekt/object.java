@@ -4,5 +4,5 @@ import Beobachter.*;
 public interface object {
     public abstract void registerObserver(Observer observer);
     public abstract void removeObserver(Observer observer);
-    public abstract void alertObserver();
+    void alertObserver();
 }

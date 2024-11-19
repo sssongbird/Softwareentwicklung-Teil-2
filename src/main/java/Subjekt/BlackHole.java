@@ -2,15 +2,14 @@ package Subjekt;
 import Beobachter.Observer;
 import java.util.ArrayList;
 import java.util.List;
-import Beobachter.Observer;
 
 public class BlackHole implements object {
 
-    private List<Observer> observerList = new ArrayList<Observer>();
+    private List<Observer> observerList = new ArrayList<>();
 
     private String action;
 
-    @Override
+    //@Override
     public void registerObserver(Observer observer) {
         this.observerList.add(observer);
     }
