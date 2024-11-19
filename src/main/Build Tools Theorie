@@ -73,15 +73,27 @@ Bereitstellen:      Kopiert den gepackten Code zur Bereitstellung in das Remote-
 
 Source: https://www.geeksforgeeks.org/what-is-maven/
 
-
-Anlegen leeres Maven Projekt
-auf ein seperates GitHUB Repo hochladen
-
-
 Gradle
+- Gradle verwendet eine domänenspezifische Sprache (DSL) basierend auf Grrovy oder Kotlin, was die Konfiguration flexibler macht
+- Gradle bietet eine einfachere und flexiblere Syntax für die Deklaration
+- Gradle macht inkrementelle Builds und Build Caching, was die Build-Caching, was die Build Zeiten erheblich verkürzen kann
+- Gradle bietet mehr Flexibilität und Anpassungsmöglichkeiten direkt im Build Skript, ohne dass zusätzliche Plugins entwickelt werden müssen
+- dadurch ist Gradle aber komplexer, bietet aber mehr Anpassungsmöglichkeiten
 
 Ant
+- Ant verwendet wie Maven .xml Skripte die man aber von Grund auf neu schreiben muss
+- Ant hat kein eingebautes Abhängigkeitsmanagement, das automatisch Bibliotheken herunterlädt und verwaltet
+- führt Aufgaben sequenziell aus und bietet keine speziellen Optimierungen für inkrementelle Builds
+- Ant ist sehr flexibel und erlaubt es  Build-Prozesse genau nach Bedarf zu definieren
+- es gibt weniger vordefinierte Konventionen
 
 IntelliJ Embedded Java Builder
+- verwendet keine seperaten Build-Skripte. Die Konfiguration erfolgt direkt in der IDE über grafische Benutzeroberflächen
+- nicht so umfangreiches Abhängigkeitsmanagement, aber es unterstützt es
+- führt inkrementelle Build durch, was die Build Zeit verkürzen kann
+- ist weniger flexible als Maven und erweiterbar als Maven, da es hauptsächlich für kleine und einfache Projekte gedacht ist
+- hat durch die nahtlose Integration in IntelliJ eine hohe Benutzerfreundlichkeit
+
+
 
 
