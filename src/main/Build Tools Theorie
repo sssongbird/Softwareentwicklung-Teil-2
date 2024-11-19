@@ -50,7 +50,7 @@ src/main/resources:     Enthält von der Anwendung verwendete Nicht-Java-Ressour
 src/main/webapp:        Enthält Ressourcen für Webanwendungen.
 src/test/java:          Enthält den Testquellcode.
 src/test/resources:     Enthält Ressourcen, die zum Testen verwendet werden.
-Ziel:                   Es enthält kompilierte Klassen, gepackte JARs/WARs und andere erstellte Artefakte.
+Target:                   Es enthält kompilierte Klassen, gepackte JARs/WARs und andere erstellte Artefakte.
 pom.xml:                Die Projektobjektmodelldatei, die die Projektkonfiguration, Abhängigkeiten und Build-Einstellungen definiert.
 
 Was ist die pom.xml datei? Wofür ist sie da? Was kann ich damit machen?
